@@ -22,7 +22,14 @@ wss.on("connection", (socket) => {
       const room = chatRooms.get(payload.roomId);
       if (room) {
         for (const client of room) {
-          client.send(JSON.stringify(payload.message));
+          const toSend = {
+            type: "incoming",
+            payload: {
+              sender: payload.username,
+              message: payload.message,
+            },
+          };
+          client.send(JSON.stringify(toSend));
         }
       }
     }

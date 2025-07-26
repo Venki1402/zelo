@@ -11,5 +11,5 @@ export interface Room {
 }
 
 export interface NavigationProps {
-  onNavigate: (page: string, roomId?: string) => void;
+  onNavigate: (page: string, roomId?: string, name?: string) => void;
 }
