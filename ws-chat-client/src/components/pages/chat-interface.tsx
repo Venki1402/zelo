@@ -32,7 +32,8 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
   }, [messages]);
 
   useEffect(() => {
-    const ws = new WebSocket("ws://localhost:8080");
+    const backendUrl = import.meta.env.VITE_BACKEND_URL || "ws://localhost:8080";
+    const ws = new WebSocket(backendUrl);
 
     ws.onopen = () => {
       setIsConnected(true);
