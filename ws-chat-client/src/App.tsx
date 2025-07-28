@@ -9,7 +9,7 @@ import ChatInterface from "./components/pages/chat-interface.tsx";
 const App = () => {
   const [currentPage, setCurrentPage] = useState("landing");
   const [currentRoomId, setCurrentRoomId] = useState("");
-  const [currentName, setCurrentName] = useState<string | undefined>("Anonymous");
+  const [currentName, setCurrentName] = useState<string | undefined>(undefined);
 
   const handleNavigate = (page: string, roomId?: string, name?: string) => {
     setCurrentPage(page);

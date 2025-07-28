@@ -12,8 +12,9 @@ const RoomManagement: React.FC<NavigationProps> = ({ onNavigate }) => {
   const [anonymous, setAnonymous] = useState(false);
 
   const handleCreateRoom = () => {
+    const userName = anonymous || !name.trim() ? "Anonymous" : name.trim();
     const newRoomId = Math.random().toString(36).substring(2, 8);
-    onNavigate("chat", newRoomId);
+    onNavigate("chat", newRoomId, userName);
   };
 
   const handleJoinRoom = () => {

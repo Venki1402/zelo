@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { MessageSquare } from "lucide-react";
 import { ModeToggle } from "../mode-toggle";
@@ -15,7 +14,7 @@ const Header = () => {
           <div className="flex items-center space-x-2">
             <MessageSquare className="h-8 w-8 text-black dark:text-white" />
             <span className="text-xl font-semibold text-black dark:text-white">
-              Chat
+              Zelo
             </span>
           </div>
           <ModeToggle />
