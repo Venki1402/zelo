@@ -5,6 +5,7 @@ import LandingPage from "./components/pages/landing-page.tsx";
 import { useState } from "react";
 import RoomManagement from "./components/pages/room-management.tsx";
 import ChatInterface from "./components/pages/chat-interface.tsx";
+import { Analytics } from "@vercel/analytics/react";
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState("landing");
@@ -53,6 +54,7 @@ const App = () => {
           {renderPage()}
         </motion.div>
       </AnimatePresence>
+      <Analytics />
     </div>
   );
 };
