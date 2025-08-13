@@ -2,7 +2,7 @@
 
 A simple real-time chat application with room-based conversations, built using React, TypeScript, Vite, and WebSockets.
 
-## Demo
+## [Demo](https://x.com/ASaiVenkatesh1/status/1949866787753111628)
 
 https://github.com/user-attachments/assets/f59c0406-bc0c-4ec0-b9fa-32b278f4e191
 
